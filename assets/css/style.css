@@ -396,6 +396,7 @@ ul.section-title-color4::before {
     color: #d72828;
 }
 
+
 /* main menu dropdown */
 .header-top-left-menu ul ul {
     background: #fff none repeat scroll 0 0;
@@ -405,7 +406,7 @@ ul.section-title-color4::before {
     left: 0;
     padding: 10px 0;
     position: absolute;
-    width: 200px;
+    width: 220px;
     z-index: 10;
     top: 110%;
     opacity: 0;
@@ -626,7 +627,7 @@ ul.section-title-color4::before {
     border-radius: 4px;
     -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
-    padding: 10px 0;
+/*     padding: 10px 0; */
     position: absolute;
     top: 100%;
     width: 100%;
@@ -699,10 +700,15 @@ ul.section-title-color4::before {
     text-align: left;
     top: 0;
     z-index: 10;
-    min-width: 200px;
+    min-width: 230px;
     padding: 10px 30px;
 }
-
+.category-title ul ul li{
+        border-bottom: 1px solid #ebebeb;
+}
+.category-title ul ul li:last-child{
+    border-bottom: none;
+}
 .category-title ul ul li a {
     margin: 0;
     padding: 3px 0;
@@ -1251,6 +1257,9 @@ ul.section-title-color4::before {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+.slider-content {
+    width: 550px;
+}
 
 .slider-content h2 {
     font-size: 48px;
@@ -1397,6 +1406,11 @@ ul.section-title-color4::before {
     margin-bottom: 35px;
 }
 
+.slider-content h5 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .slider-style-4 .slider-content .primary-color {
     color: #fed700;
 }
@@ -1992,6 +2006,9 @@ ul.section-title-color4::before {
 }
 
 .grid-product-info {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 10px 0;
     text-align: center;
 }
