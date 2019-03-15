@@ -358,10 +358,18 @@ ul.section-title-color4::before {
     width: 30%;
     float: left;
 }
+.top-header li:hover a{
+    color: #ffc107;
+}
 .header-top-left ul li a{
     color: #fff;
 }
 /* end header top */
+/* home-store-policy */
+.home-store-policy {
+    margin-bottom: 20px;
+}
+/* end home-store-policy */
 .header-top-left-menu ul {
     display: inline-block;
     vertical-align: middle;
@@ -580,7 +588,16 @@ ul.section-title-color4::before {
     position: relative;
     z-index: 9;
 }
+/* scroll menu */
 
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+}
+
+/* end scroll menu */
 .product-category {
     float: left;
     position: relative;
