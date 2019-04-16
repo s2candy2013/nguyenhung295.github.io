@@ -348,17 +348,13 @@ ul.section-title-color4::before {
     z-index: 101;
 }
 /* header top menu about us*/
-.top-header {
-    padding-left: 20px;
+.header-top-left {
     display: inline-block;
-    width: 70%;
-    float: right;
 }
-.top-header li{
-    width: 30%;
-    float: left;
+.header-top-left li{
+    text-align: center;
 }
-.top-header li:hover a{
+.header-top-left li a:hover{
     color: #ffc107;
 }
 .header-top-left ul li a{
