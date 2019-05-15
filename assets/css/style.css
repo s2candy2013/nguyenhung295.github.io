@@ -4727,6 +4727,21 @@ thead {
     width: 38px;
     z-index: 9999;
     border-radius: 3px;
+    animation: scrollup 1s infinite;
+}
+@keyframes scrollup{
+
+    0% {
+        bottom: 35px;
+    }
+    50% {
+        bottom: 45px;
+    }
+    100% {
+        bottom: 35px;
+    }
+
+
 }
 
 #scrollUp i {
