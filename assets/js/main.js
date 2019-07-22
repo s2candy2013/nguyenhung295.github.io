@@ -2,7 +2,7 @@
     "use strict";
 
     /* Category menu */
-    function catMenu(){
+    function catMenu() {
         var primaryTigger = $('.category-title h6'),
             navSelector = $('.product-category nav'),
             extraMenuTigger = $('.more-cat span'),
@@ -11,10 +11,10 @@
             openText = 'More Categories',
             closeText = 'Close Menu';
 
-        primaryTigger.on('click', function (){
+        primaryTigger.on('click', function() {
             navSelector.slideToggle(300);
-        });   
-        extraMenuTigger.on('click', function (){
+        });
+        extraMenuTigger.on('click', function() {
             extraMenuSelector.slideToggle(300);
             if (extraMenuTigger.hasClass(classOpen)) {
                 extraMenuTigger.removeClass(classOpen);
@@ -22,23 +22,23 @@
             } else {
                 extraMenuTigger.addClass(classOpen);
                 extraMenuTigger.text(closeText);
-            }    
+            }
         });
     }
     catMenu();
 
     // mini cart
-    function minicart(){
+    function minicart() {
         var miniCartTigger = $(".cart-tigger > a"),
             minicartSelector = $(".cart-tigger .mini-cart"),
             minicartCloseTigger = $(".minicart-close"),
             addActiveClass = 'active';
 
-        miniCartTigger.on('click', function(e){
+        miniCartTigger.on('click', function(e) {
             e.preventDefault();
             minicartSelector.toggleClass(addActiveClass);
         });
-        minicartCloseTigger.on('click', function(){
+        minicartCloseTigger.on('click', function() {
             minicartSelector.removeClass(addActiveClass);
         });
     }
@@ -47,15 +47,15 @@
     // figurebay Countdown
     function figurebayCountdown() {
         $('[data-countdown]').each(function() {
-          var $this = $(this),
-          finalDate = $this.data('countdown');
-          $this.countdown(finalDate, function(event) {
-          $this.html(event.strftime('<span class="cdown days"><span class="time-count">%-D</span> <p>Days</p></span> <span class="cdown hour"><span class="time-count">%-H</span> <p>Hour</p></span> <span class="cdown minutes"><span class="time-count">%M</span> <p>Min</p></span> <span class="cdown second"><span class="time-count">%S</span> <p>Sec</p>'));
-          });
-        });          
+            var $this = $(this),
+                finalDate = $this.data('countdown');
+            $this.countdown(finalDate, function(event) {
+                $this.html(event.strftime('<span class="cdown days"><span class="time-count">%-D</span> <p>Days</p></span> <span class="cdown hour"><span class="time-count">%-H</span> <p>Hour</p></span> <span class="cdown minutes"><span class="time-count">%M</span> <p>Min</p></span> <span class="cdown second"><span class="time-count">%S</span> <p>Sec</p>'));
+            });
+        });
     }
-    figurebayCountdown(); 
-    
+    figurebayCountdown();
+
 
 
 
@@ -68,39 +68,39 @@
     //     meanExpand: '<i class="material-icons">keyboard_arrow_right</i>',
     //     meanContract: '<i class="material-icons">keyboard_arrow_down</i>'
     // });
-    
+
 
     /*====== Cart Plus Minus Button ======*/
-    function figurebayCartQuantity(){
+    function figurebayCartQuantity() {
         $(".cart-plus-minus").append('<div class="dec qtybutton">-</div><div class="inc qtybutton">+</div>');
-            $(".qtybutton").on("click", function() {
-                var $button = $(this);
-                var oldValue = $button.parent().find("input").val();
-                if ($button.text() == "+") {
-                    var newVal = parseFloat(oldValue) + 1;
+        $(".qtybutton").on("click", function() {
+            var $button = $(this);
+            var oldValue = $button.parent().find("input").val();
+            if ($button.text() == "+") {
+                var newVal = parseFloat(oldValue) + 1;
+            } else {
+                // Don't allow decrementing below zero
+                if (oldValue > 0) {
+                    var newVal = parseFloat(oldValue) - 1;
                 } else {
-                   // Don't allow decrementing below zero
-                    if (oldValue > 0) {
-                        var newVal = parseFloat(oldValue) - 1;
-                    } else {
-                        newVal = 0;
-                    }
+                    newVal = 0;
                 }
-                $button.parent().find("input").val(newVal);
+            }
+            $button.parent().find("input").val(newVal);
         });
     }
     figurebayCartQuantity();
-    
-    
+
+
     /* slider active */
-    function figurebaySliderActive(){
+    function figurebaySliderActive() {
         $('.slider-active').owlCarousel({
             loop: true,
             nav: false,
-            dots:true,
+            dots: true,
             autoplay: true,
             autoplayTimeout: 6000,
-            autoplayHoverPause:true,
+            autoplayHoverPause: true,
             animateOut: 'fadeOut',
             animateIn: 'fadeIn',
             navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
@@ -116,15 +116,15 @@
                     items: 1
                 }
             }
-        });   
+        });
         // slider carousel dot in add class container
         var addContainerClass = 'container',
-        classSelector = $('.slider-area .owl-dots');
+            classSelector = $('.slider-area .owl-dots');
         classSelector.addClass(addContainerClass);
     }
-    figurebaySliderActive();    
+    figurebaySliderActive();
 
-    /* checkout page toggle function  */   
+    /* checkout page toggle function  */
     $('#showlogin').on('click', function() {
         $('#checkout-login').slideToggle(900);
     });
@@ -139,12 +139,12 @@
 
     $('#ship-box').on('click', function() {
         $('#ship-box-info').slideToggle(1000);
-    });    
+    });
 
-    
+
     /* Nice Select */
-    function ActiveNiceSelecct(){
-        jQuery('.nice-select').niceSelect(); 
+    function ActiveNiceSelecct() {
+        jQuery('.nice-select').niceSelect();
     }
     ActiveNiceSelecct();
 
@@ -213,8 +213,8 @@
     $('.home-hot-deal-slider').owlCarousel({
         loop: true,
         nav: true,
-        dots:false,
-        margin:30,
+        dots: false,
+        margin: 30,
         autoplay: true,
         autoplayTimeout: 4000,
         autoplayHoverPause: true,
@@ -242,10 +242,10 @@
     $('.brand-carousel').owlCarousel({
         loop: true,
         nav: true,
-        dots:false,
+        dots: false,
         autoplay: true,
         autoplayTimeout: 2000,
-        autoplayHoverPause:true,
+        autoplayHoverPause: true,
         navText: ['<i class="material-icons">keyboard_arrow_left</i>', '<i class="material-icons">keyboard_arrow_right</i>'],
         item: 5,
         responsive: {
@@ -404,7 +404,7 @@
     //     slidesToScroll: 1,
     //     prevArrow: '<i class="material-icons bs-arrow-left">keyboard_arrow_left</i>',
     //     nextArrow: '<i class="material-icons bs-arrow-right">keyboard_arrow_right</i>'
-        
+
     // });
     // // home3 recent product
     // $('.home3-recent-product').slick({
@@ -441,7 +441,7 @@
     //           }
     //         }
     //       ]           
-        
+
     // });
     // // home2-tab-style2-carousel
     // $('.home2-tab-style2-carousel, .home2-tab-style2-carousel2, .home2-tab-style2-carouse3').slick({
@@ -546,26 +546,25 @@
         prevArrow: '<i class="material-icons bs-arrow-left">keyboard_arrow_left</i>',
         nextArrow: '<i class="material-icons bs-arrow-right">keyboard_arrow_right</i>',
         slidesToScroll: 1,
-          responsive: [
-            {
-              breakpoint: 1171,
-              settings: {
-                slidesToShow: 3,
-              }
+        responsive: [{
+                breakpoint: 1171,
+                settings: {
+                    slidesToShow: 3,
+                }
             },
             {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-              }
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-              }
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
             }
-          ]        
+        ]
     });
     // home 4 carousel product
     $('.home4-carousel-product').slick({
@@ -575,28 +574,27 @@
         prevArrow: '<i class="material-icons bs-arrow-left">keyboard_arrow_left</i>',
         nextArrow: '<i class="material-icons bs-arrow-right">keyboard_arrow_right</i>',
         slidesToScroll: 1,
-          responsive: [
-            {
-              breakpoint: 1200,
-              settings: {
-                slidesToShow: 3,
-              }
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                }
             },
             {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-                arrows: false
-              }
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false
+                }
             },
             {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                arrows: false
-              }
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false
+                }
             }
-          ]        
+        ]
     });
     // // home product category slider
     // $('.cat-slider1, .cat-slider2').slick({
@@ -650,9 +648,9 @@
             }
         }
     });
-    
-    
-   
+
+
+
     /*------ Wow Active ----*/
     new WOW().init();
 
@@ -660,12 +658,12 @@
     /*------ Product details page gallery ----*/
     function ActiveFotorama() {
         jQuery('.fotorama').fotorama({
-            thumbwidth:109,
-            thumbheight:109,
-            thumbmargin:7,
-            thumbborderwidth:1,
+            thumbwidth: 109,
+            thumbheight: 109,
+            thumbmargin: 7,
+            thumbborderwidth: 1,
             // thumbfit:'cover',
-            transition:'dissolve',
+            transition: 'dissolve',
             allowfullscreen: true,
             nav: 'thumbs'
         });
@@ -675,19 +673,19 @@
     /*------ Product details page gallery ----*/
     function QuickViewActiveFotorama() {
         jQuery('.quickview-fotorama').fotorama({
-            thumbwidth:109,
-            thumbheight:109,
-            thumbmargin:7,
-            thumbborderwidth:1,
+            thumbwidth: 109,
+            thumbheight: 109,
+            thumbmargin: 7,
+            thumbborderwidth: 1,
             // thumbfit:'cover',
-            transition:'dissolve',
+            transition: 'dissolve',
             allowfullscreen: true,
             nav: 'thumbs'
         });
     }
     QuickViewActiveFotorama();
 
-    
+
     /*--------------------------
      ScrollUp
     ---------------------------- */
@@ -698,7 +696,7 @@
         animation: 'fade'
     });
 
-    
+
 })(jQuery);
 // preloader
 // var overlay = document.getElementById("bg-preload");
@@ -710,23 +708,18 @@
 //     )
 $(window).load(function() {
     $("#bg-preload").fadeOut("slow");
-  $("#loader-wrapper").fadeOut("slow");
+    $("#loader-wrapper").fadeOut("slow");
 })
 // end preloader
 
 // fixed scroll menu
-
+var offset = $('.header-bottom').offset().top;
 $(window).scroll(function() {
-    if($(window).scrollTop() >= 250){
+    if ($(window).scrollTop() >= offset) {
         $('.header-bottom').addClass('fixed-header')
-    }
-    else {
+    } else {
         $('.header-bottom').removeClass('fixed-header')
     }
 });
 
-// end fixed scroll menu 
-
-
-
-
+// end fixed scroll menu
