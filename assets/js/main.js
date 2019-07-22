@@ -718,10 +718,10 @@ $(window).load(function() {
 
 $(window).scroll(function() {
     if($(window).scrollTop() >= 250){
-        $('.header-bottom').addClass('.fixed-header')
+        $('.header-bottom').addClass('fixed-header')
     }
     else {
-        $('.header-bottom').removeClass('.fixed-header')
+        $('.header-bottom').removeClass('fixed-header')
     }
 });
 

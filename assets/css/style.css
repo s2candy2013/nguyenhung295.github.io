@@ -587,6 +587,7 @@ ul.section-title-color4::before {
 /* scroll menu */
 
 .fixed-header {
+    background: #17a2b8;
     position: fixed;
     top: 0;
     left: 0;
