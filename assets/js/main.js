@@ -713,9 +713,9 @@ $(window).load(function() {
 // end preloader
 
 // fixed scroll menu
-var offset = $('.header-bottom').offset().top;
+var offsetMenuTop = $('.header-bottom').offset().top;
 $(window).scroll(function() {
-    if ($(window).scrollTop() >= offset) {
+    if ($(window).scrollTop() >= offsetMenuTop) {
         $('.header-bottom').addClass('fixed-header')
     } else {
         $('.header-bottom').removeClass('fixed-header')
