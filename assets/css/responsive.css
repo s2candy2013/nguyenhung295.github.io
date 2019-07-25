@@ -171,7 +171,7 @@
 /* Tablet desktop :768px. */
 
 @media (min-width: 768px) and (max-width: 991px) {
-	    .header-quick-links a i {
+        .header-quick-links a i {
         font-size: 30px;
         display: block;
     }
@@ -355,7 +355,7 @@
     .header-4 .logo {
         text-align: left;
     }
-
+    
     .header-4 .header-top-right-menu {
         text-align: right;
     }
@@ -736,10 +736,17 @@
     .header-4 .header-top-left-menu {
         text-align: center;
     }
-
+    .header-4 .header-bottom{
+        padding: 0;
+    }
     .header-4 .logo {
         margin-bottom: 25px;
     }
+
+.logo.col-sm-12 img {
+    width: 90%;
+    padding-left: 15%;
+}
 
     .header-phone {
         border-left: 0 solid rgba(255, 255, 255, 0.1);
